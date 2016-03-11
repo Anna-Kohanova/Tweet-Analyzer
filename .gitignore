@@ -1,6 +1,7 @@
-nbproject/private/
-build/
+build/classes/
 nbbuild/
+nbproject/
+manifest.mf/
 dist/
 nbdist/
 nbactions.xml
