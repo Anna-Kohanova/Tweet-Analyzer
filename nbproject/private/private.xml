@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Ania/Documents/NetBeansProjects/TweetAnalyzer/src/tweetsData/Coordinates.java</file>
+            <file>file:/C:/Users/Ania/Documents/NetBeansProjects/TweetAnalyzer/src/parsers/StateParser.java</file>
+            <file>file:/C:/Users/Ania/Documents/NetBeansProjects/TweetAnalyzer/src/reader/StateReader.java</file>
+            <file>file:/C:/Users/Ania/Documents/NetBeansProjects/TweetAnalyzer/src/parsers/TweetParser.java</file>
+            <file>file:/C:/Users/Ania/Documents/NetBeansProjects/TweetAnalyzer/src/tweetanalyzer/TweetAnalyzer.java</file>
+            <file>file:/C:/Users/Ania/Documents/NetBeansProjects/TweetAnalyzer/src/parsers/Parser.java</file>
+            <file>file:/C:/Users/Ania/Documents/NetBeansProjects/TweetAnalyzer/src/tweetsData/Tweet.java</file>
+            <file>file:/C:/Users/Ania/Documents/NetBeansProjects/TweetAnalyzer/src/reader/ColoringReader.java</file>
+            <file>file:/C:/Users/Ania/Documents/NetBeansProjects/TweetAnalyzer/src/reader/TweetReader.java</file>
+            <file>file:/C:/Users/Ania/Documents/NetBeansProjects/TweetAnalyzer/src/tweetsData/Coloring.java</file>
+            <file>file:/C:/Users/Ania/Documents/NetBeansProjects/TweetAnalyzer/src/parsers/ColoringParser.java</file>
+            <file>file:/C:/Users/Ania/Documents/NetBeansProjects/TweetAnalyzer/src/tweetsData/State.java</file>
+        </group>
+    </open-files>
+</project-private>

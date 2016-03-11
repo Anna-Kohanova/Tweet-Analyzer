@@ -16,17 +16,17 @@ public class TweetAnalyzer {
         // Command line parameters
         int start = Integer.valueOf(args[0]);
         int amount = Integer.valueOf(args[1]);
-        String fileName = args[2];
-        
+        String fileName = args[2];        
 
         TweetReader tweetsReader = new TweetReader(fileName);        
         ArrayList<Tweet> tweets = tweetsReader.returnTweetsList(); 
         
         ColoringReader coloringReader = new ColoringReader();
         Coloring.setColoring(coloringReader.returnColoringHashMap());  
+        Map<String, Double> coloring = Coloring.getColoring();
         
         StateReader stateReader = new StateReader();
-        stateReader.reader();
+        ArrayList<Double> coordinates = stateReader.reader();
         
         
         for(int i = start; i < start + amount; i++) {

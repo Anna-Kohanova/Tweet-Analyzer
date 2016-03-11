@@ -16,12 +16,12 @@ import tweetsData.Coordinates;
 public final class StateParser implements Parser {
 
     @Override
-    public ArrayList<State> parser(String text) {
+    public ArrayList<Double> parser(String text) {
 
         JSONParser parser = new JSONParser();
-
-        ArrayList<State> states = new ArrayList<State>();
-
+        
+        ArrayList<Double> coordinates = new ArrayList<Double>();
+        
         try {
 
             Object obj = parser.parse(text);
@@ -34,25 +34,26 @@ public final class StateParser implements Parser {
             String state;
             while (matcher.find()) {
                 state = matcher.group();
-
-                ArrayList<Double> coordinates = new ArrayList<Double>();
+                
                 JSONArray msg = (JSONArray) jsonObject.get(state);
                 Iterator<Double> iterator = msg.iterator();
-
-                while (iterator.hasNext()) {
+                
+                while(iterator.hasNext()) {
                     coordinates.add(iterator.next());
                 }
                 
-                for (Double c: coordinates) {
-                    System.out.println(c.toString());
-                }
+//                for (Object ob: msg) {
+//                    System.out.println(ob); 
+//                }
                 
-                //states.add(new State(coordinates, state));
+                for (Object d: coordinates) {
+                    System.out.println(d); 
+                }
             }
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
-        return null;
+        return coordinates;
     }
 }
