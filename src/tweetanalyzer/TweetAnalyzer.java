@@ -11,26 +11,35 @@ import tweetsData.Tweet;
 
 public class TweetAnalyzer {
 
-    public static void main(String[] args) throws IOException {        
-        
+    public static void main(String[] args) throws IOException {
+
         // Command line parameters
         int start = Integer.valueOf(args[0]);
         int amount = Integer.valueOf(args[1]);
-        String fileName = args[2];        
+        String fileName = args[2];
 
-        TweetReader tweetsReader = new TweetReader(fileName);        
-        ArrayList<Tweet> tweets = tweetsReader.returnTweetsList(); 
-        
+        TweetReader tweetsReader = new TweetReader(fileName);
+        ArrayList<Tweet> tweets = tweetsReader.returnTweetsList();
+
         ColoringReader coloringReader = new ColoringReader();
-        Coloring.setColoring(coloringReader.returnColoringHashMap());  
+        Coloring.setColoring(coloringReader.returnColoringHashMap());
         Map<String, Double> coloring = Coloring.getColoring();
-        
+
+        for (Map.Entry entry : coloring.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+
         StateReader stateReader = new StateReader();
         ArrayList<Double> coordinates = stateReader.reader();
-        
-        
-        for(int i = start; i < start + amount; i++) {
+
+        for (Object coord: coordinates) {
+            System.out.println(coord);
+        }
+
+        for (int i = start; i < start + amount; i++) {
             System.out.println(tweets.get(i).toString());
         }
+        
+                // спросить как оформлять отчёты
     }
 }
