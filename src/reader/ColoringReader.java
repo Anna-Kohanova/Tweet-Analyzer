@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import parsers.ColoringParser;
+import parsers.Parser;
 
 public class ColoringReader {
     private String csvFile;
@@ -24,7 +25,7 @@ public class ColoringReader {
         Map<String, String> ht = new HashMap<String, String>();
         String line = "";
         
-        ColoringParser parser = new ColoringParser();
+        Parser<String[]> parser = new ColoringParser();
 
         try {
 

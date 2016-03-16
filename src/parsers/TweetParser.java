@@ -1,10 +1,11 @@
 package parsers;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import tweetsData.Tweet;
 
-public final class TweetParser implements Parser {    
+public final class TweetParser implements Parser<Tweet> {    
     
     private Pattern coordPattern;
     private Pattern datePattern;

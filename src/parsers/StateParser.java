@@ -9,15 +9,16 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import tweetsData.State;
 
-public final class StateParser implements Parser {
+public final class StateParser implements Parser <ArrayList<State>>{
 
     @Override
-    public ArrayList<Double> parser(String text) {
+    public ArrayList<State> parser(String text) {
 
         JSONParser parser = new JSONParser();
-        
-        ArrayList<Double> coordinates = new ArrayList<Double>();
+        ArrayList<State> states = new ArrayList<State>();        
+        ArrayList<Object> coordinates = new ArrayList<Object>();
         
         try {
 
@@ -39,18 +40,13 @@ public final class StateParser implements Parser {
                     coordinates.add(iterator.next());
                 }
                 
-//                for (Object ob: msg) {
-//                    System.out.println(ob); 
-//                }
+                states.add(new State(coordinates, state));
                 
-                for (Object d: coordinates) {
-                    System.out.println(d); 
-                }
             }
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
-        return coordinates;
+        return states;
     }
 }

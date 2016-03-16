@@ -4,15 +4,15 @@ import java.util.ArrayList;
 
 public class State {
 
-    private ArrayList<Coordinates> coordinates;
+    private ArrayList<Object> coordinates;
     private String stateName;
 
-    public State(ArrayList<Coordinates> coordinates, String stateName) {
+    public State(ArrayList<Object> coordinates, String stateName) {
         this.coordinates = coordinates;
         this.stateName = stateName;
     }
 
-    public ArrayList<Coordinates> getCoordinates() {
+    public ArrayList<Object> getCoordinates() {
         return coordinates;
     }
 

@@ -7,6 +7,7 @@ import java.util.Map;
 import reader.ColoringReader;
 import reader.StateReader;
 import tweetsData.Coloring;
+import tweetsData.State;
 import tweetsData.Tweet;
 
 public class TweetAnalyzer {
@@ -25,21 +26,19 @@ public class TweetAnalyzer {
         Coloring.setColoring(coloringReader.returnColoringHashMap());
         Map<String, Double> coloring = Coloring.getColoring();
 
-        for (Map.Entry entry : coloring.entrySet()) {
-            System.out.println(entry.getKey() + " : " + entry.getValue());
-        }
+//        for (Map.Entry entry : coloring.entrySet()) {
+//            System.out.println(entry.getKey() + " : " + entry.getValue());
+//        }
 
         StateReader stateReader = new StateReader();
-        ArrayList<Double> coordinates = stateReader.reader();
+        ArrayList<State> states = stateReader.reader();
 
-        for (Object coord: coordinates) {
-            System.out.println(coord);
-        }
+//        for (State state: states) {
+//            System.out.println(state.getStateName());
+//        }
 
         for (int i = start; i < start + amount; i++) {
             System.out.println(tweets.get(i).toString());
         }
-        
-                // спросить как оформлять отчёты
     }
 }

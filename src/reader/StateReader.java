@@ -5,12 +5,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import parsers.Parser;
 import parsers.StateParser;
+import tweetsData.State;
 
 public class StateReader {
 
-    public ArrayList<Double> reader() throws FileNotFoundException, IOException {
-        StateParser sp = new StateParser();
+    public ArrayList<State> reader() throws FileNotFoundException, IOException {
+        Parser<ArrayList<State>> sp = new StateParser();
 
         File file = new File("states.json");
         FileInputStream fis = new FileInputStream(file);

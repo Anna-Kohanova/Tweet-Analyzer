@@ -1,6 +1,6 @@
 package parsers;
 
-public class ColoringParser implements Parser {
+public class ColoringParser implements Parser <String[]>{
 
     @Override
     public String[] parser(String line) {

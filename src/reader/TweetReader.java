@@ -5,7 +5,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import parsers.Parser;
 import parsers.TweetParser;
+import tweetsData.State;
 import tweetsData.Tweet;
 
 public class TweetReader {
@@ -23,7 +25,7 @@ public class TweetReader {
 
         String line = "";
         ArrayList<Tweet> allTweets = new ArrayList<>();
-        TweetParser parser = new TweetParser();
+        Parser<Tweet> parser = new TweetParser();
 
         try {
             while ((line = reader.readLine()) != null) {
