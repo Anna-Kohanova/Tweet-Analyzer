@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import reader.ColoringReader;
 import reader.StateReader;
+import reports.HashtagReport;
 import tweetsData.Coloring;
 import tweetsData.State;
 import tweetsData.Tweet;
@@ -26,19 +27,15 @@ public class TweetAnalyzer {
         Coloring.setColoring(coloringReader.returnColoringHashMap());
         Map<String, Double> coloring = Coloring.getColoring();
 
-//        for (Map.Entry entry : coloring.entrySet()) {
-//            System.out.println(entry.getKey() + " : " + entry.getValue());
-//        }
-
         StateReader stateReader = new StateReader();
         ArrayList<State> states = stateReader.reader();
 
-//        for (State state: states) {
-//            System.out.println(state.getStateName());
-//        }
+        HashtagReport tagReport = new HashtagReport(tweets, "#Winning");
+        ArrayList<Tweet> selectedTweets = tagReport.getReportResult();
 
-        for (int i = start; i < start + amount; i++) {
-            System.out.println(tweets.get(i).toString());
-        }
+        // Output for checking the 1st report
+//        for (Tweet tw : selectedTweets) {
+//            System.out.println(tw.getTweet());
+//        }
     }
 }
