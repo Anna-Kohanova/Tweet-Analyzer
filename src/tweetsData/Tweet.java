@@ -16,6 +16,10 @@ public class Tweet {
     
     @Override
     public String toString() {
-        return "Tweet:  " + date + "  " + coordinates.getX() + ", " + coordinates.getY() + "        " + tweet;
+        return "Tweet:  " + date + "  " + coordinates.getX() + ", " + coordinates.getY() + "        " + getTweet();
+    }
+
+    public String getTweet() {
+        return tweet;
     }
 }
