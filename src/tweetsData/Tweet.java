@@ -1,13 +1,15 @@
 package tweetsData;
 
+import java.util.Date;
+
 public class Tweet {
     
     private String tweet; 
     private Coordinates coordinates;
-    private String date;  // Date  
+    private Date date;  
     private Double emotionalColoring;
     
-     public Tweet(String date, String coordinates, String tweet){
+     public Tweet(Date date, String coordinates, String tweet){
         this.tweet = tweet;
         this.coordinates = new Coordinates(coordinates);
         this.date = date;
@@ -16,10 +18,14 @@ public class Tweet {
     
     @Override
     public String toString() {
-        return "Tweet:  " + date + "  " + coordinates.getX() + ", " + coordinates.getY() + "        " + getTweet();
+        return "Tweet:  " + getDate() + "  " + coordinates.getX() + ", " + coordinates.getY() + "        " + getTweet();
     }
 
     public String getTweet() {
         return tweet;
+    }
+
+    public Date getDate() {
+        return date;
     }
 }
