@@ -9,7 +9,10 @@ import reader.ColoringReader;
 import reader.StateReader;
 import reports.ColoringReport;
 import reports.HashtagReport;
+import reports.ReportInfo;
+import reports.StatesReport;
 import tweetsData.Coloring;
+import tweetsData.Coordinates;
 import tweetsData.State;
 import tweetsData.Tweet;
 
@@ -31,26 +34,34 @@ public class TweetAnalyzer {
 
         StateReader stateReader = new StateReader();
         ArrayList<State> states = stateReader.reader();
-
-        HashtagReport tagReport = new HashtagReport(tweets, "#Winning");
-        ArrayList<Tweet> selectedTweets = tagReport.getReportResult();
-
-//        StatesReport statesReport = new StatesReport();
-//        statesReport.getReportResult();
+        
         String firstDate = "2011-08-28 18:35:06";
-        String secondDate = "2011-08-28 20:04:46";
+        String secondDate = "2011-08-28 20:04:46";    
+        
+        String tag = "#Winning";
+        
+        ReportInfo info = new ReportInfo(tweets, states, firstDate, secondDate, tag, coloring);
 
-        ColoringReport coloringReport = new ColoringReport(coloring, tweets, firstDate, secondDate);
-        Map<String, Double> tweetColoring = coloringReport.getReportResult();
+        HashtagReport tagReport = new HashtagReport();
+        ArrayList<Tweet> selectedTweets = tagReport.getReportResult(info);
+
+        StatesReport statesReport = new StatesReport();
+        String state = statesReport.getReportResult(info);
+
+        ColoringReport coloringReport = new ColoringReport();
+        Map<String, Double> tweetColoring = coloringReport.getReportResult(info);
 
         // Output for checking the second report
 //        for (Map.Entry<String, Double> map: tweetColoring.entrySet()) {
 //            System.out.println("Weight : " + map.getValue() + "   " + map.getKey());
 //        }
         
-        // Output for checking the 1st report
+     //    Output for checking the 1st report
 //        for (Tweet tw : selectedTweets) {
 //            System.out.println(tw.getTweet());
 //        }
+        
+//        Output for checking the third report
+//        System.out.println(state);
     }
 }

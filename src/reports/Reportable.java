@@ -1,5 +1,5 @@
 package reports;
 
 public interface Reportable <T> {
-    public T getReportResult();
+    public T getReportResult(ReportInfo info);
 }

@@ -2,20 +2,20 @@ package tweetsData;
 
 public final class Coordinates {
     
-    private static double x;
-    private static double y;
+    private int x = 0;
+    private int y = 0;
     
-    public double getX() {
-        return this.x;
-    }
-    
-    public double getY() {
+    public int getX() {
         return this.y;
     }
     
+    public int getY() {
+        return this.x;
+    }
+    
     public Coordinates(String coordinates){
-        this.x = Double.parseDouble (coordinates.substring (coordinates.indexOf('[') + 1, coordinates.indexOf(',') - 1));
-        this.y = Double.parseDouble (coordinates.substring (coordinates.indexOf(',') + 1, coordinates.indexOf(']') - 1));
+        this.x = (int)(Double.parseDouble (coordinates.substring (coordinates.indexOf('[') + 1, coordinates.indexOf(',') - 1))*1000000);
+        this.y = (int)(Double.parseDouble (coordinates.substring (coordinates.indexOf(',') + 1, coordinates.indexOf(']') - 1))*1000000);
     }
     
 }

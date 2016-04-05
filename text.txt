@@ -1,4 +1,4 @@
-[33.979703999999998, -118.037312]	6	2011-08-28 19:35:49	Flat Iron steak sandwich, Arnold Palmer (under contract at BIOLA) (@ The 6740) http://t.co/xCE6jou
+﻿[33.979703999999998, -118.037312]	6	2011-08-28 19:35:49	Flat Iron steak sandwich, Arnold Palmer (under contract at BIOLA) (@ The 6740) http://t.co/xCE6jou
 [42.917841000000003, -78.877071999999998]	6	2011-08-28 19:41:00	Pulled pork sandwich, mac-n-cheese from Fat Bob's. (@ Elmwood Avenue Festival of the Arts) http://t.co/pkedqkn
 [47.864685469999998, -122.28599858]	6	2011-08-28 19:59:49	Why is lettuce so important to a sandwich/burger when it taste like nothing and has no nutritional value?
 [40.70896407, -73.818375709999998]	6	2011-08-28 20:10:57	Hurricane Tuna Sandwich fix (@ Dunkin' Donuts w/ 3 others) [pic]: http://t.co/qzXaFD2
@@ -83,7 +83,7 @@
 [42.272316140000001, -72.664324140000005]	0	2011-08-29 17:15:34	Roast beef sandwich  @ Jim's Burger Works http://t.co/8OoTeVI
 [40.752817, -73.989345]	0	2011-08-29 17:22:02	I'm at Cosi Sandwich Bar - 36th St (202 West 36th St, W 37th St., New York) http://t.co/dmTSIi8
 [43.088369380000003, -88.06689978]	0	2011-08-29 17:34:23	I'm at Potbelly’s Sandwich Works (12455 W Capitol Dr, at N 124th St, Brookfield) w/ 2 others http://t.co/ITczIpd
-[35.858685149999999, -78.579947700000005]	0	2011-08-29 17:36:20	I want a Cajun Filet sandwich from Bojangles #hungry
+[35.858685149999999, -78.579947700000005]	0	2011-08-29 17:36:20	I want a Cajun Filet sandwich from Bojangles #Winning
 [42.355975190000002, -71.053647990000002]	0	2011-08-29 17:38:27	Asian sammies with @owentc (@ Fóumami - Asian Sandwich Bar) http://t.co/txC41iW
 [43.038843870000001, -87.911240000000006]	0	2011-08-29 17:41:46	I just ousted @jamesebriggs as the mayor of Potbelly Sandwich Works on @foursquare! http://t.co/5q9kQeh
 [41.938059809999999, -87.653819080000005]	0	2011-08-29 17:46:50	Homework and turkey sandwich! #Wowijustgotlame
@@ -97,7 +97,7 @@
 [39.042490999999998, -95.629495000000006]	0	2011-08-29 18:14:13	A quality salad and sandwich combo for $5 (@ Harvest Cafe) [pic]: http://t.co/cFBQeXK
 [62.451379000000003, -114.37392199999999]	0	2011-08-29 18:21:02	Turkey sandwich and Ham wrap (@ Le Stock Pot) http://t.co/TCi0xUw
 [35.122862560000002, -77.08855638]	0	2011-08-29 18:23:59	Sitting in the AC eating a sandwich at subway. Pretty sure I smell like an ox. Still no power and cleaned the yard up all day...
-[39.770787200000001, -105.1434311]	0	2011-08-29 18:29:11	That one person at subway that never puts anything on your sandwich.
+[39.770787200000001, -105.1434311]	0	2011-08-29 18:29:11	That one person at subway that never puts anything on your sandwich. #Winning
 [44.976284, -93.272277000000003]	0	2011-08-29 18:36:17	I'm at Potbelly Sandwich Works - IDS Center (80 S 8th St, at Nicollet Mall, Minneapolis) w/ 3 others http://t.co/yiHWSRJ
 [32.54082983, -117.02783067999999]	0	2011-08-29 18:37:03	Hate waiting .... But a good sandwich is at the end of the road
 [40.287511000000002, -76.655787000000004]	0	2011-08-29 18:42:12	I'm at Crustano's Sandwich Crafters @ Hersheypark (Founder's Circle, Craftbarn, Hershey) http://t.co/4dpvRjF
@@ -111,7 +111,7 @@
 [42.541651819999998, -83.458777249999997]	0	2011-08-29 18:59:10	Pastrami and corned beef sandwich!!! (@ northside deli) http://t.co/0YpAoQw
 [34.082878229999999, -118.27347899999999]	0	2011-08-29 19:17:04	Cuban sandwich! (@ Cafe Tropical) http://t.co/CLi2YD1
 [38.367252569999998, -75.615742019999999]	0	2011-08-29 19:22:58	Dey gonna go ham sandwich double meat
-[39.747125199999999, -94.7955015]	0	2011-08-29 19:24:59	Ate my @subwayfreshbuzz sandwich too fast so now my stomach hurts lol..but it was yummy :)
+[39.747125199999999, -94.7955015]	0	2011-08-29 19:24:59	Ate my @subwayfreshbuzz sandwich too fast so now my stomach hurts lol..but it was yummy #Winning :)
 [40.757790180000001, -73.979809279999998]	0	2011-08-29 19:34:14	I'm at Potbelly Sandwich Works (30 Rockefeller Center, New York) w/ 9 others http://t.co/lxUOMWv
 [34.422742900000003, -119.697952]	0	2011-08-29 19:34:45	So excited for my roasted turkey and baked Brie sandwich on a croissant for lunch!!! (@ Panino) http://t.co/tfc8uWA
 [38.928686999999996, -77.032854]	0	2011-08-29 19:40:44	Hurray soup (@ Potbelly Sandwich Works) http://t.co/yQZMJ5w
@@ -131,9 +131,9 @@
 [39.380013939999998, -76.690400539999999]	0	2011-08-29 20:57:34	just had my first meal of the day, aka half of my sandwich..
 [39.153218019999997, -76.724299189999996]	0	2011-08-29 21:14:21	I'm at Potbelly Sandwich Works (7049 Arundel Mills Blvd, Hanover) http://t.co/4dxOSJZ
 [30.387343520000002, -91.182092069999996]	0	2011-08-29 21:16:34	Spicy chicken sandwich #JackNDaBox
-[47.621833000000002, -122.339167]	0	2011-08-29 21:24:29	Is that a Cuban Sandwich in your pocket or are you just happy to see me? @SnoutandCo http://t.co/4F59llT
+[47.621833000000002, -122.339167]	0	2011-08-29 21:24:29	Is that a Cuban Sandwich #Winning in your pocket or are you just happy to see me? @SnoutandCo http://t.co/4F59llT
 [45.654457379999997, -122.51056043]	0	2011-08-29 22:01:09	@trixstaaa so I'm just a sandwich to you now, I see.
-[31.93935643, -106.4394138]	0	2011-08-29 22:21:46	But first Imma get my #ChefBoyarNegro on && make a sandwich :b
+[31.93935643, -106.4394138]	0	2011-08-29 22:21:46	But first Imma get my #Winning on && make a sandwich :b
 [42.36171745, -71.020510540000004]	0	2011-08-29 22:34:48	giant ice cream sandwich #iwant http://t.co/NJ2fO6Y
 [32.232435700000003, -110.951622]	0	2011-08-29 22:35:49	Bagel sandwich!!! Score. (@ On Deck Deli) http://t.co/JWB9jYn
 [31.829273100000002, -81.601855400000005]	0	2011-08-29 22:46:44	A sandwich with NO mayo but you put ketchup O.o #WTF

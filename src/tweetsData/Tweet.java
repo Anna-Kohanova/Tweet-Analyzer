@@ -18,7 +18,7 @@ public class Tweet {
     
     @Override
     public String toString() {
-        return "Tweet:  " + getDate() + "  " + coordinates.getX() + ", " + coordinates.getY() + "        " + getTweet();
+        return "Tweet:  " + getDate() + "  " + getCoordinates().getX() + ", " + getCoordinates().getY() + "        " + getTweet();
     }
 
     public String getTweet() {
@@ -27,5 +27,12 @@ public class Tweet {
 
     public Date getDate() {
         return date;
+    }
+
+    /**
+     * @return the coordinates
+     */
+    public Coordinates getCoordinates() {
+        return coordinates;
     }
 }
