@@ -1,10 +1,13 @@
 package tweetanalyzer;
 
+import java.awt.Polygon;
 import reader.TweetReader;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Map;
+import polygons.AppFrame;
+import polygons.Polygons;
 import reader.ColoringReader;
 import reader.StateReader;
 import reports.ColoringReport;
@@ -12,7 +15,6 @@ import reports.HashtagReport;
 import reports.ReportInfo;
 import reports.StatesReport;
 import tweetsData.Coloring;
-import tweetsData.Coordinates;
 import tweetsData.State;
 import tweetsData.Tweet;
 
@@ -52,9 +54,9 @@ public class TweetAnalyzer {
         Map<String, Double> tweetColoring = coloringReport.getReportResult(info);
 
         // Output for checking the second report
-//        for (Map.Entry<String, Double> map: tweetColoring.entrySet()) {
-//            System.out.println("Weight : " + map.getValue() + "   " + map.getKey());
-//        }
+        for (Map.Entry<String, Double> map: tweetColoring.entrySet()) {
+            System.out.println("Weight : " + map.getValue() + "   " + map.getKey());
+        }
         
      //    Output for checking the 1st report
 //        for (Tweet tw : selectedTweets) {
@@ -63,5 +65,10 @@ public class TweetAnalyzer {
         
 //        Output for checking the third report
 //        System.out.println(state);
+        
+        
+        // Draw map of the states
+        ArrayList<Polygon> polygonList = Polygons.getPolygons(states);        
+        new AppFrame().draw(polygonList);
     }
 }

@@ -1,11 +1,8 @@
 package reports;
 
-import java.awt.Polygon;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -36,7 +33,7 @@ public class StatesReport implements Reportable<String> {
                 for (Tweet tweet : info.getTweets()) {
                     if (((Tweet) tweet).getDate().after(firstDate) && ((Tweet) tweet).getDate().before(secondDate)) {
 
-                        if (Polygons.isInside(tweet, state)) {
+                        if (Polygons.isInside(tweet.getCoordinates(), state)) {
                             count++;                            
                         }
                     }
@@ -48,6 +45,7 @@ public class StatesReport implements Reportable<String> {
                 }
 
             }
+            
         } catch (ParseException ex) {
             Logger.getLogger(StatesReport.class.getName()).log(Level.SEVERE, null, ex);
         }

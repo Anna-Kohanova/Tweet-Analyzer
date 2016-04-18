@@ -6,6 +6,7 @@ import tweetsData.State;
 import tweetsData.Tweet;
 
 public class ReportInfo {
+    
     private ArrayList<Tweet> tweets;
     private ArrayList<State> states;
     private String firstDate;
