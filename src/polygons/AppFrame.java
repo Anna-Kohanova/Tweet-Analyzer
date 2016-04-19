@@ -5,6 +5,11 @@ import java.awt.*;
 import java.awt.Polygon;
 import java.util.ArrayList;
 
+/**
+ * JFrame for drawing the map of all states
+ * @author Ania
+ */
+
 public class AppFrame extends JFrame {
     
     static final String appTitle = "Frame-Application";
@@ -23,6 +28,11 @@ public class AppFrame extends JFrame {
         frame.repaint();
     }
 
+    /**
+     * Override method for states painting 
+     * @param g 
+     */
+    
     @Override
     public void paint(Graphics g) {
         

@@ -10,8 +10,22 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import tweetsData.Tweet;
 
+/**
+ * Coloring report
+ * Calculation of emotional coloring (weight) of tweets in given period
+ * @author Ania
+ */
+
 public class ColoringReport implements Reportable<Map<String, Double>> {
 
+    
+    /**
+     * Calculate the emotional coloring of tweets in given period
+     * 
+     * @param info
+     * @return Map objects with the key as coloring and the value as tweet text
+     */
+    
     @Override
     public Map<String, Double> getReportResult(ReportInfo info) {
         
@@ -40,8 +54,7 @@ public class ColoringReport implements Reportable<Map<String, Double>> {
             Logger.getLogger(ColoringReport.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        return tweetColoring;
-        
+        return tweetColoring;        
     }
 
 }

@@ -10,8 +10,19 @@ import polygons.Polygons;
 import tweetsData.State;
 import tweetsData.Tweet;
 
+/**
+ * Third state report for defining the state with maximum number of tweets in some period of time
+ * @author Ania
+ */
+
 public class StatesReport implements Reportable<String> {
 
+    /**
+     * Find a state with maximum number of tweets in some period of time
+     * @param info ReportInfo objects
+     * @return state name
+     */
+    
     @Override
     public String getReportResult(ReportInfo info) {
 

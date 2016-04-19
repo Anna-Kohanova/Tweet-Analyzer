@@ -5,7 +5,22 @@ import java.util.ArrayList;
 import tweetsData.Coordinates;
 import tweetsData.State;
 
+/**
+ * Class with Polygons methods for third report 
+ * 
+ * @see Polygon
+ * @author Ania
+ */
+
 public final class Polygons {
+    
+    /**
+     * Checking if the coordinate of current tweet is inside the polygon
+     * 
+     * @param coordinate Coordinates object
+     * @param state State object
+     * @return boolean variable as the result of checking
+     */
 
     public static Boolean isInside(Coordinates coordinate, State state) {
         
@@ -31,6 +46,14 @@ public final class Polygons {
         }
         return false;
     }
+    
+    /**
+     * 
+     * Create an ArrayList of polygons using states coordinates
+     * 
+     * @param states 
+     * @return the ArrayList of created polygons
+     */
     
     public static ArrayList<Polygon> getPolygons(ArrayList<State> states){
 

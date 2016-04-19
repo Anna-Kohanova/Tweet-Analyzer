@@ -5,6 +5,11 @@ import java.util.Map;
 import tweetsData.State;
 import tweetsData.Tweet;
 
+/**
+ * All information for making reports
+ * @author Ania
+ */
+
 public class ReportInfo {
     
     private ArrayList<Tweet> tweets;
@@ -13,6 +18,16 @@ public class ReportInfo {
     private String secondDate;
     private String tag;
     private Map<String, Double> coloring;
+    
+    /**
+     * Initialization of all objects
+     * @param tweets
+     * @param states
+     * @param firstDate
+     * @param secondDate
+     * @param tag
+     * @param coloring 
+     */
     
     public ReportInfo(ArrayList<Tweet> tweets, ArrayList<State> states, String firstDate, String secondDate, String tag, Map<String, Double> coloring) {
         this.tweets = tweets;
