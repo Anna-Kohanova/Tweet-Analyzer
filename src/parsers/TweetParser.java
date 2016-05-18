@@ -3,7 +3,9 @@ package parsers;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -26,7 +28,7 @@ public final class TweetParser implements Parser<Tweet> {
         StringBuilder tweetText = new StringBuilder();
         tweetText.append(line);
 
-         DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = new Date();
         String coordinates = "";
         String str = tweetText.toString();
@@ -37,15 +39,19 @@ public final class TweetParser implements Parser<Tweet> {
         if (dateMatch.find() && coordinatesMatch.find()) {
             coordinates = coordinatesMatch.group();
             
+            Calendar cl = Calendar.getInstance();
+            
             try {
                 date = format.parse(dateMatch.group());
+                cl.setTime(date);
+                
             } catch (ParseException ex) {
                 Logger.getLogger(TweetParser.class.getName()).log(Level.SEVERE, null, ex);
             }
 
             String tw = str.substring(dateMatch.end(), str.length());
         
-            return new Tweet(date, coordinates, tw.trim());
+            return new Tweet(date, coordinates, cl, tw.trim());
         }
         return null;
         }    

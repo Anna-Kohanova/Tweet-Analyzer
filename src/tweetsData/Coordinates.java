@@ -26,5 +26,9 @@ public final class Coordinates {
         this.y = Double.parseDouble (coordinates.substring (coordinates.indexOf(',') + 1, coordinates.indexOf(']') - 1));
     }
     
+    public Coordinates (double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
 }
 

@@ -30,6 +30,7 @@ public class ColoringReport implements Reportable<Map<String, Double>> {
     public Map<String, Double> getReportResult(ReportInfo info) {
         
         Map<String, Double> tweetColoring = new HashMap<>();
+        
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         try {

@@ -13,7 +13,8 @@ public class HashtagReport implements Reportable <ArrayList<Tweet>>{
 
     
     /**
-     * Finding all tweets with given hashtag
+     * Finding all tweets {@link Tweet} with given hashtag
+     * 
      * @param info
      * @return ArrayList of Tweet objects
      */

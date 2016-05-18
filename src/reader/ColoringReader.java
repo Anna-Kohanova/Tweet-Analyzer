@@ -22,7 +22,7 @@ public class ColoringReader {
      
       public Map returnColoringHashMap() throws FileNotFoundException {
 
-        Map<String, String> ht = new HashMap<String, String>();
+        Map<String, Double> ht = new HashMap<String, Double>();
         String line = "";
         
         Parser<String[]> parser = new ColoringParser();
@@ -30,7 +30,7 @@ public class ColoringReader {
         try {
 
             while ((line = csvReader.readLine()) != null) {
-                ht.put(parser.parser(line)[0], parser.parser(line)[1]);
+                ht.put(parser.parser(line)[0], Double.parseDouble(parser.parser(line)[1]));
             }
 
         } catch (FileNotFoundException e) {
