@@ -14,7 +14,6 @@ import tweetsData.State;
 
 public final class StateParser implements Parser<ArrayList<State>> {
 
-    @Override
     public ArrayList<State> parser(String text) {
 
         JSONParser parser = new JSONParser();

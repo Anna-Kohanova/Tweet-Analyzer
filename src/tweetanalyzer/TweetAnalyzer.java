@@ -22,13 +22,18 @@ import tweetsData.Tweet;
 
 import java.sql.*;
 import reports.Sort;
+import threads.ClReader;
+import threads.FirstReport;
+import threads.SecondReport;
+import threads.StReader;
+import threads.ThirdReport;
+import threads.TwReader;
 import tweetsData.TweetColoringList;
 import tweetsData.TweetList;
 
 public class TweetAnalyzer {
 
-    public static void main(String[] args) throws IOException, ParseException, ClassNotFoundException, SQLException {
-    
+    public static void main(String[] args) throws IOException, ParseException, ClassNotFoundException, SQLException, InterruptedException {
         
         DBConnection dbConnection = new DBConnection(); 
         dbConnection.isConnected();
@@ -38,40 +43,94 @@ public class TweetAnalyzer {
 //        int amount = Integer.valueOf(args[1]);
         String fileName = args[2];
 
-        TweetReader tweetsReader = new TweetReader(fileName);
-        ArrayList<Tweet> tweets = tweetsReader.returnTweetsList();
+        
+        
+        
+//        TweetReader tweetsReader = new TweetReader(fileName);
+//        ArrayList<Tweet> tweets = tweetsReader.returnTweetsList();
+        
+        TwReader tweetsReader = new TwReader();
+        tweetsReader.run();
+        tweetsReader.join();
+        ArrayList<Tweet> tweets = tweetsReader.getTweets();
         
         TweetList tweetList = new TweetList();
-        tweetList.setTweets(tweets);
-
-        ColoringReader coloringReader = new ColoringReader();
-        Coloring.setColoring(coloringReader.returnColoringHashMap());
+        tweetList.setTweets(tweets); 
+        
+//         for (Tweet st : tweets) {
+//            System.out.println(st.getTweet());
+//        }       
+        
+        
+        
+//        ColoringReader coloringReader = new ColoringReader();
+        ClReader clReader = new ClReader();
+        clReader.run();
+        clReader.join();     
+        Coloring.setColoring(clReader.getHt());    
         Map<String, Double> coloring = Coloring.getColoring();
+        
+//        for (Map.Entry<String, Double> map: coloring.entrySet()) {
+//            System.out.println("Weight : " + map.getValue() + "   " + map.getKey());
+//        }    
+        
+        
+        
 
-        StateReader stateReader = new StateReader();
-        ArrayList<State> states = stateReader.reader();
+//        StateReader stateReader = new StateReader();
+//        ArrayList<State> states = stateReader.reader();
+        
+        StReader stReader = new StReader();
+        stReader.run();
+        stReader.join();
+        ArrayList<State> states = stReader.getStates();
+        
+     
         
         String firstDate = "2011-08-28 18:35:06";
-        String secondDate = "2011-08-28 20:04:46";    
-        
+        String secondDate = "2011-08-28 20:04:46";            
         String tag = "#Winning";
         
         ReportInfo info = new ReportInfo(tweets, states, firstDate, secondDate, tag, coloring);
-
-        HashtagReport tagReport = new HashtagReport();
-        ArrayList<Tweet> selectedTweets = tagReport.getReportResult(info);
-
-        StatesReport statesReport = new StatesReport();
-        String state = statesReport.getReportResult(info);
-
-        ColoringReport coloringReport = new ColoringReport();
-        Map<String, Double> tweetColoring = coloringReport.getReportResult(info);
         
         
-        // Output for checking the second report
-//        for (Map.Entry<String, Double> map: coloring.entrySet()) {
+
+//        HashtagReport tagReport = new HashtagReport();
+//        ArrayList<Tweet> selectedTweets = tagReport.getReportResult(info);
+        
+        FirstReport firstReport = new FirstReport(info);
+        firstReport.run();
+        firstReport.join();
+        ArrayList<Tweet> selectedTweets = firstReport.getSelectedTweets();      
+        
+//         for (Tweet st : selectedTweets) {
+//            System.out.println(st.getTweet());
+//        }
+        
+        
+        
+//        StatesReport statesReport = new StatesReport();
+//        String state = statesReport.getReportResult(info);
+                
+        SecondReport secondReport = new SecondReport(info);
+        secondReport.run();
+        secondReport.join();
+        String state = secondReport.getResultState();
+      //  System.out.println(state);
+           
+        
+        
+        
+        ThirdReport thirdReport = new ThirdReport(info);
+        thirdReport.run();
+        thirdReport.join();
+        Map<String, Double> tweetColoring = thirdReport.getTweetColoring();
+      
+//        for (Map.Entry<String, Double> map: tweetColoring.entrySet()) {
 //            System.out.println("Weight : " + map.getValue() + "   " + map.getKey());
 //        }
+            
+        
         
         
         
@@ -87,27 +146,12 @@ public class TweetAnalyzer {
 //        for (Tweet tw : tl.getTweets()) {
 //            System.out.println(tw.getTweet());
 //        }
-//        
+        
 //        for (Map.Entry<String, Double> map: coloringList.getHt().entrySet()) {
 //            System.out.println("Weight : " + map.getValue() + "   " + map.getKey());
-//        }
+//        }     
         
-        
-        
-
-        // Output for checking the second report
-//        for (Map.Entry<String, Double> map: tweetColoring.entrySet()) {
-//            System.out.println("Weight : " + map.getValue() + "   " + map.getKey());
-//        }
-        
-     //    Output for checking the 1st report
-//        for (Tweet tw : selectedTweets) {
-//            System.out.println(tw.getTweet());
-//        }
-        
-//        Output for checking the third report
-//        System.out.println(state);
-        
+      
         
         // Draw map of the states
         //ArrayList<Polygon> polygonList = Polygons.getPolygons(states);        

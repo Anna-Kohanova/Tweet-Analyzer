@@ -11,20 +11,22 @@ import parsers.ColoringParser;
 import parsers.Parser;
 
 public class ColoringReader {
+
     private String csvFile;
     private BufferedReader csvReader;
+    private Map<String, Double> ht;
 
-     public ColoringReader() throws FileNotFoundException {
+    public ColoringReader() throws FileNotFoundException {
 
         this.csvFile = "sentiments.csv";
         this.csvReader = new BufferedReader(new FileReader(csvFile));
     }
-     
-      public Map returnColoringHashMap() throws FileNotFoundException {
+
+    public Map returnColoringHashMap() throws FileNotFoundException {
 
         Map<String, Double> ht = new HashMap<String, Double>();
         String line = "";
-        
+
         Parser<String[]> parser = new ColoringParser();
 
         try {
@@ -49,4 +51,5 @@ public class ColoringReader {
 
         return ht;
     }
+
 }
