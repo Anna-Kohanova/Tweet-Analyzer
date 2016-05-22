@@ -88,7 +88,7 @@ public class TweetAnalyzer {
      
         
         String firstDate = "2011-08-28 18:35:06";
-        String secondDate = "2011-08-28 20:04:46";            
+        String secondDate = "2011-08-30 20:04:46";            
         String tag = "#Winning";
         
         ReportInfo info = new ReportInfo(tweets, states, firstDate, secondDate, tag, coloring);
@@ -99,7 +99,7 @@ public class TweetAnalyzer {
 //        ArrayList<Tweet> selectedTweets = tagReport.getReportResult(info);
         
         FirstReport firstReport = new FirstReport(info);
-        firstReport.run();
+        firstReport.start();
         firstReport.join();
         ArrayList<Tweet> selectedTweets = firstReport.getSelectedTweets();      
         
@@ -113,7 +113,7 @@ public class TweetAnalyzer {
 //        String state = statesReport.getReportResult(info);
                 
         SecondReport secondReport = new SecondReport(info);
-        secondReport.run();
+        secondReport.start();
         secondReport.join();
         String state = secondReport.getResultState();
       //  System.out.println(state);
@@ -140,10 +140,11 @@ public class TweetAnalyzer {
         
         TweetList tl = dbWorker.getAllTweets(dbConnection); 
         TweetColoringList coloringList = dbWorker.getAllColoring(dbConnection);
+        TweetList tweetsInInterval = dbWorker.getTweetsInInterval(dbConnection);
       //  TweetList tl = dbWorker.getTweetsWithHashtag(dbConnection, "'%winning%'");
         
         
-//        for (Tweet tw : tl.getTweets()) {
+//        for (Tweet tw : tweetsInInterval.getTweets()) {
 //            System.out.println(tw.getTweet());
 //        }
         

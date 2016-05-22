@@ -2,12 +2,10 @@ package threads;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import reader.ColoringReader;
-import reader.StateReader;
 
 public class ClReader extends Thread {
     

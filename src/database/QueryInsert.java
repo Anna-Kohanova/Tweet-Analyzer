@@ -60,8 +60,7 @@ public class QueryInsert {
          } catch (SQLException e) {
              e.printStackTrace();
          }
-     }
-    
+     } 
     
     
 }

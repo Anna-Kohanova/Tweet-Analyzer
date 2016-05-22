@@ -79,6 +79,8 @@ public class QueryGet {
 
         return coloring;
     }
+     
+     
 
 }
     

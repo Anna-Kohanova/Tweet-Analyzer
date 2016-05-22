@@ -1,10 +1,6 @@
 package threads;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import reader.StateReader;
 import reports.HashtagReport;
 import reports.ReportInfo;
 import tweetsData.Tweet;

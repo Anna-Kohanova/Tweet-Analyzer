@@ -13,6 +13,7 @@ public class DBWorker {
     final String GET_TWEET = "SELECT * FROM all_tweets";
     final String GET_COLORING = "SELECT * FROM coloring";
     final String GET_WHERE_HASHTAG = "SELECT * FROM all_tweets WHERE tweet LIKE";
+    final String GET_WHERE_TIME = "SELECT * FROM all_tweets WHERE date BETWEEN '2011-08-28' AND '2011-08-29'";
 
     public void insertTweets(DBConnection dbConnection, TweetList tweetList) throws ParseException {
         QueryInsert queryExecution = new QueryInsert(dbConnection.getConnection(), INSERT_TWEET);
@@ -46,6 +47,12 @@ public class DBWorker {
 
     public TweetList getTweetsWithHashtag(DBConnection dbConnection, String hashtag) {
         QueryGet queryGet = new QueryGet(dbConnection.getConnection(), GET_WHERE_HASHTAG + hashtag);
+
+        return queryGet.getAllTweets();
+    }
+    
+     public TweetList getTweetsInInterval(DBConnection dbConnection) {
+        QueryGet queryGet = new QueryGet(dbConnection.getConnection(), GET_WHERE_TIME);
 
         return queryGet.getAllTweets();
     }
